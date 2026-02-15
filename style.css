@@ -1,3 +1,95 @@
 .body{
-    background-color: rgb(104, 96, 150);
+    background-color: rgb(225, 225, 228);
+    margin: 0; /* Убираем отступы у body */
+    padding: 0; /* Убираем padding у body */
+    min-height: 100vh; /* Минимальная высота на весь экран */
+    display: flex;
+    flex-direction: column;
 }
+.navbar{
+    background-color: rgb(130, 22, 22);
+
+}
+.cards{
+    padding: 20px;
+    margin-bottom: 30px
+
+
+}
+.card-img-top{
+    height: 250px;
+}
+
+.btn{
+    background-color:rgb(130, 22, 22);
+}
+.nav{
+    margin-bottom: 60px;
+}
+.row{
+    --bs-gutter-x: 0rem;
+}
+.title{
+    margin: 20px;
+    text-align: center;
+}
+
+.carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.carousel-item img {
+  width: 100% !important;
+  height: 450px !important;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Опционально: уменьшаем подписи */
+.carousel-caption {
+  font-size: 0.9rem;
+  bottom: 20px;
+}
+.footer{
+    background-color: rgb(103, 103, 103);
+
+}
+/* Затемнение для карусели */
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+/* Стили для текста, чтобы он был ярче и поверх затемнения */
+.carousel-caption {
+    z-index: 10; /* Увеличиваем z-index, чтобы текст был выше затемнения */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white; /* Яркий белый цвет */
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    opacity: 1; /* Убираем прозрачность (было 0.9) */
+    color: white; /* Яркий белый цвет */
+    font-weight: 500; /* Немного жирнее */
+}
+
